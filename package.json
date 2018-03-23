@@ -1,0 +1,28 @@
+{
+  "name": "nexting-queue",
+  "version": "0.0.1",
+  "description": "nexting queue to iterate over a array",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cereceres/nexting-queue.git"
+  },
+  "keywords": [
+    "next",
+    "queue",
+    "array",
+    "promise"
+  ],
+  "author": "Jesus Cereceres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cereceres/nexting-queue/issues"
+  },
+  "homepage": "https://github.com/Cereceres/nexting-queue#readme"
+}
