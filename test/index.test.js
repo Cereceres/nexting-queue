@@ -4,7 +4,7 @@ const assert = require('assert');
 
 
 describe('description', () => {
-    it('should', (done) => {
+    it('should catch the exec from push method', (done) => {
         let counter = 0;
         const promise1 = (next, error, param) => {
             counter++;
@@ -42,7 +42,7 @@ describe('description', () => {
         queue.push(promise1, promise2, promise3, promise4);
     });
 
-    it('should', (done) => {
+    it('should get the exec from array given', (done) => {
         let counter = 0;
         const promise1 = (next, error, param) => {
             counter++;
@@ -69,12 +69,11 @@ describe('description', () => {
             counter++;
             assert(param === 'test');
         };
-        const queue = queueNext([], 2, 'test');
+        const queue = queueNext([promise1, promise2, promise3, promise4], 2, 'test');
 
-        queue.push(promise1, promise2, promise3, promise4);
     });
 
-    it('should', (done) => {
+    it('should get the exec from push method and only run the future given', (done) => {
         let counter = 0;
         const promise1 = (next, error, param) => {
             counter++;

@@ -21,12 +21,8 @@ module.exports = (arrayToListen = [], future = 1, ...extraArgs) => {
 
         if (!isFunc(toExec)) return;
 
-        try {
-            process.nextTick(toExec, next, errorPassed, ...extraArgs, ...otherArgs);
-            running++;
-        } catch (error) {
-            return next(error);
-        }
+        process.nextTick(toExec, next, errorPassed, ...extraArgs, ...otherArgs);
+        running++;
     };
     arrayToListen._$push = arrayToListen.push;
     arrayToListen.push = function(...args) {
